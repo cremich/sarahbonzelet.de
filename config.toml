@@ -40,7 +40,7 @@ theme = "2020"
     identifier = "aboutme"
     name = "Über mich"
     title = "Über mich"
-    url = "/#ueber-mich"
+    url = "/ueber-mich"
     weight = -100
   [[menu.main]]
     identifier = "services"
@@ -58,7 +58,7 @@ theme = "2020"
     identifier = "aboutme"
     name = "Über mich"
     title = "Über mich"
-    url = "/#ueber-mich"
+    url = "/ueber-mich"
     weight = -100
   [[menu.footer]]
     identifier = "services"

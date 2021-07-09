@@ -1,7 +1,6 @@
 @font-face {
   font-family: 'amatic_scregular';
-  src: url('/fonts/amaticsc-regular-webfont.woff2') format('woff2'),
-  url('/fonts/amaticsc-regular-webfont.woff') format('woff');
+  src: url('/fonts/amaticsc-regular-webfont.woff2') format('woff2'), url('/fonts/amaticsc-regular-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -14,14 +13,14 @@ p {
   h2 {
     @extend .title;
     @extend .is-4;
-    @extend .has-text-weight-light
+    @extend .has-text-weight-light;
   }
 
   h3 {
     @extend .mt-5;
     @extend .title;
     @extend .is-5;
-    @extend .has-text-weight-light
+    @extend .has-text-weight-light;
   }
 }
 
@@ -103,12 +102,12 @@ p {
     display: block;
     opacity: 0;
 
-    position: absolute;   /* or float: left; width: 100%;*/
+    position: absolute; /* or float: left; width: 100%;*/
     left: 0;
     right: 0;
 
     transform: translateY(-50%);
-    transition: all .4s ease-in-out;
+    transition: all 0.4s ease-in-out;
     pointer-events: none;
   }
 
@@ -136,5 +135,10 @@ p {
 
 .has-image-border-white {
   border: 0.2rem solid $white;
+  padding: 1rem;
+}
+
+.has-image-border-primary {
+  border: 0.1rem solid $primary;
   padding: 1rem;
 }

@@ -1,0 +1,74 @@
+baseURL = "https://main.d2iipcev5cnqlz.amplifyapp.com/"
+languageCode = "de-de"
+DefaultContentLanguage = "de"
+title = "Sarah Bonzelet - Hair & Make-Up"
+theme = "2020"
+
+[params]
+  author = "Sarah Bonzelet"
+  og_image = "/images/og.png"
+  sitename = "Sarah Bonzelet - Hair & Make-Up"
+  description = "Hair & Make-Up für dein Braut- und Gästestyling in Köln und Umgebung"
+  facebook_url = "https://www.facebook.com/sarah.schminkt.koeln"
+  facebook_handle = "sarah.schminkt.koeln"
+  instagram_url = "https://www.instagram.com/sarah.schminkt"
+  instagram_handle = "@sarah.schminkt"
+  pinterest_url = "https://www.pinterest.de/sarahschminkt"
+  pinterest_handle = "sarahschminkt"
+
+[Author]
+  name = "Sarah Bonzelet"
+  email = "sarah.schminkt@gmail.com"
+  street = "Usinger Straße 63"
+  city = "51105 Köln"
+  mobile = "+49 175 471 82 89"
+
+[languages]
+  [languages.de]
+    languageName = "German"
+    languageCode = "de-de"
+    weight = 1
+
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    title = "Startseite"
+    url = "/"
+    weight = -110
+  [[menu.main]]
+    identifier = "aboutme"
+    name = "Über mich"
+    title = "Über mich"
+    url = "/#ueber-mich"
+    weight = -100
+  [[menu.main]]
+    identifier = "services"
+    name = "Leistungen"
+    title = "Leistungen"
+    url = "/#meine-leistungen"
+    weight = -90
+  [[menu.footer]]
+    identifier = "home"
+    name = "Home"
+    title = "Startseite"
+    url = "/"
+    weight = -110
+  [[menu.footer]]
+    identifier = "aboutme"
+    name = "Über mich"
+    title = "Über mich"
+    url = "/#ueber-mich"
+    weight = -100
+  [[menu.footer]]
+    identifier = "services"
+    name = "Leistungen"
+    title = "Leistungen"
+    url = "/#meine-leistungen"
+    weight = -90
+  [[menu.footer]]
+    identifier = "sitemap"
+    name = "Sitemap"
+    title = "Sitemap"
+    url = "/sitemap.xml"
+    weight = -30

@@ -1,0 +1,140 @@
+@font-face {
+  font-family: 'amatic_scregular';
+  src: url('/fonts/amaticsc-regular-webfont.woff2') format('woff2'),
+  url('/fonts/amaticsc-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+p {
+  @extend .mb-2;
+}
+
+.markdown {
+  h2 {
+    @extend .title;
+    @extend .is-4;
+    @extend .has-text-weight-light
+  }
+
+  h3 {
+    @extend .mt-5;
+    @extend .title;
+    @extend .is-5;
+    @extend .has-text-weight-light
+  }
+}
+
+.home-about {
+  h3 {
+    text-align: center;
+  }
+}
+
+.service-teaser {
+  position: relative;
+  text-align: center;
+  color: white;
+
+  img {
+    filter: brightness(75%);
+  }
+
+  /* Centered text */
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.home-hero {
+  @include mobile {
+    .hero-logo {
+      text-align: center;
+      img {
+        width: auto;
+        height: auto;
+      }
+    }
+    .hero-body {
+      padding-top: 0;
+    }
+  }
+
+  @include tablet-only {
+    .hero-logo {
+      text-align: center;
+      img {
+        max-width: 25%;
+        width: auto;
+        height: auto;
+      }
+    }
+    .hero-body {
+      padding-top: 0;
+    }
+  }
+
+  @include desktop {
+    min-height: 100vh;
+    background-image: url($heroImageDesktop);
+    background-repeat: no-repeat;
+    background-size: cover;
+    .hero-body {
+      align-items: center;
+      display: flex;
+    }
+    .hero-logo {
+      position: relative;
+      left: 15%;
+    }
+  }
+
+  // iPad Pro 12.9inch portrait
+  @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+    background-position-x: center;
+  }
+}
+
+@include until($desktop) {
+  .navbar-menu {
+    display: block;
+    opacity: 0;
+
+    position: absolute;   /* or float: left; width: 100%;*/
+    left: 0;
+    right: 0;
+
+    transform: translateY(-50%);
+    transition: all .4s ease-in-out;
+    pointer-events: none;
+  }
+
+  .navbar-menu.is-active {
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+  }
+}
+
+.navbar {
+  .navbar-brand {
+    .navbar-item {
+      position: absolute;
+      img {
+        max-height: 6rem;
+      }
+    }
+  }
+}
+
+.line-height-normal {
+  line-height: initial;
+}
+
+.has-image-border-white {
+  border: 0.2rem solid $white;
+  padding: 1rem;
+}

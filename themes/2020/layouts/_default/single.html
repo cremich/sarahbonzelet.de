@@ -1,0 +1,13 @@
+{{ define "main" }}
+{{- partial "navbar.html" . -}}
+<div class="section">
+    <div class="container">
+        <h1 class="title is-1 has-text-centered has-text-primary is-family-secondary">{{ .Title | markdownify }}</h1>
+        <div class="columns">
+            <div class="markdown has-text-weight-light column has-text-justified is-three-fifths is-offset-one-fifth">
+                {{ .Content }}
+            </div>
+        </div>
+    </div>
+</div>
+{{end}}

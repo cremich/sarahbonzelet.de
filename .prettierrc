@@ -1,0 +1,17 @@
+{
+  "printWidth": 140,
+  "singleQuote": true,
+  "tabWidth": 2,
+  "semi": true,
+  "useTabs": false,
+  "arrowParens": "avoid",
+  "bracketSpacing": true,
+  "overrides": [
+    {
+      "files": ["*.html"],
+      "options": {
+        "parser": "go-template"
+      }
+    }
+  ]
+}

@@ -9,7 +9,7 @@ resources:
   - src: makeup.jpg
     title: 'Portraitbild einer Frau mit Tagesmakeup'
     name: 'Gästestyling'
-  - src: schminkparty.jpg
-    title: 'Szene einer Schminkparty'
-    name: 'Schminkparty'
+  - src: schminkworkshop.jpg
+    title: 'Szene eines Schminkworkshops'
+    name: 'Schminkworkshop'
 ---

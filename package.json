@@ -27,6 +27,8 @@
     "*.{js,css,md}": "prettier --write"
   },
   "scripts": {
+    "build": "hugo",
+    "start": "hugo serve",
     "prepare": "husky install"
   }
 }

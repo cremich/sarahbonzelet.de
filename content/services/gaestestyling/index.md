@@ -3,6 +3,10 @@ title: 'Gästestyling'
 anchor: 'gaestestyling'
 ---
 
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+Deine Gäste sollen auch in den Genuss eines professionellen Stylings kommen oder der Bräutigam möchte ein leichtes Touch Up, um wacher und frischer auszusehen?
 
-<!--more-->
+Sehr gern!
+
+Gib mir hierfür bitte [rechtzeitig Bescheid](/kontakt), wie viele Deiner Gäste ein professionelles Hairstyling, Make-up oder Touch Up buchen möchten.
+
+Die aktuellen Preise kannst du meiner [Preisliste](/preisliste) entnehmen.

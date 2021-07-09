@@ -1,11 +1,7 @@
 ---
 title: 'Preisliste'
 description: 'Hier findest du eine übersicht meiner aktuellen Preise zum Braut- und Gästestyling.'
-menu:
-  main:
-    weight: -90
-  footer:
-    weight: -90
+url: 'preisliste'
 ---
 
 ## Brautstyling

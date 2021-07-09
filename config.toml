@@ -48,6 +48,18 @@ theme = "2020"
     title = "Leistungen"
     url = "/#meine-leistungen"
     weight = -90
+  [[menu.main]]
+    identifier = "preisliste"
+    name = "Preistliste"
+    title = "Preisliste"
+    url = "/preisliste"
+    weight = -80    
+  [[menu.main]]
+    identifier = "kontakt"
+    name = "Kontakt"
+    title = "Kontakt"
+    url = "/kontakt"
+    weight = -70        
   [[menu.footer]]
     identifier = "home"
     name = "Home"
@@ -66,6 +78,18 @@ theme = "2020"
     title = "Leistungen"
     url = "/#meine-leistungen"
     weight = -90
+  [[menu.footer]]
+    identifier = "preisliste"
+    name = "Preistliste"
+    title = "Preisliste"
+    url = "/preisliste"
+    weight = -80    
+  [[menu.footer]]
+    identifier = "kontakt"
+    name = "Kontakt"
+    title = "Kontakt"
+    url = "/kontakt"
+    weight = -70           
   [[menu.footer]]
     identifier = "sitemap"
     name = "Sitemap"

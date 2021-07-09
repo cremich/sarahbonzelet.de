@@ -10,6 +10,6 @@ Vor meiner Arbeit als Visagistin habe ich Erziehungswissenschaften studiert und 
 
 Seit Anfang 2019 bin ich nun Visagistin und habe mich auf das Brautstyling spezialisiert. Ich kann mir mittlerweile nichts schöneres mehr vorstellen. Jede Braut, die mir ihr Vertrauen schenkt, ist etwas ganz Besonderes. Für mich ist es jeden Mal aufs Neue eine große Ehre, eine zukünftige Braut auf ihrem Weg zu ihrem großen Tag begleiten zu dürfen und ich stecke mein gesamtes Herzblut in das perfekte Styling für Dich.
 
-Wenn Du mehr über mein Angebot erfahren möchtest, schau gerne mal bei meinen Leistungen vorbei oder schick mir eine unverbindliche Anfrage über mein Kontaktformular und erhalte meine Info-Broschüre.
+Wenn du mehr über mein Angebot erfahren möchtest, schau gerne mal bei meinen [Leistungen](/#meine-leistungen) vorbei oder schick mir eine unverbindliche Anfrage über mein [Kontaktformular](/kontakt) und erhalte meine Info-Broschüre.
 
-Erfahrungsgemäß sind Brautstylingtermine schnell ausgebucht, also warte nicht zu lange und sichere Dir Dein persönliches Brautstyling bei mir!
+Erfahrungsgemäß sind Brautstylingtermine schnell ausgebucht, also warte nicht zu lange und sichere Dir Dein persönliches [Brautstyling](/services/brautstyling) bei mir!

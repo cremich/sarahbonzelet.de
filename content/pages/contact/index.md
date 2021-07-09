@@ -1,11 +1,7 @@
 ---
 title: 'Kontakt'
 description: 'Wenn du eine Frage zu meinem Portfolio hast oder einen Termin zur Beratung vereinbaren möchtest, schicke mir gerne eine E-Mail über mein Kontaktformular'
-menu:
-  main:
-    weight: -80
-  footer:
-    weight: -80
+url: 'kontakt'
 ---
 
 Wenn du eine Frage zu meinem Portfolio hast oder einen Termin zur Beratung vereinbaren möchtest, schicke mir gerne eine E-Mail über mein Kontaktformular.

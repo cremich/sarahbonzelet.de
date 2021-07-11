@@ -1,52 +1,53 @@
-<div class="container mt-6">
+<form id="contactForm">
+  <div class="container mt-6">
     <div class="field">
-        <div class="columns">
-            <div class="column">
-                <label class="label">Dein Vorname</label>
-                <div class="control">
-                    <input class="input is-medium" type="text" placeholder="">
-                </div>
-            </div>
-            <div class="column">
-                <label class="label">Dein Nachname</label>
-                <div class="control">
-                    <input class="input is-medium" type="text" placeholder="">
-                </div>
-            </div>
+      <div class="columns">
+        <div class="column">
+          <label class="label">Dein Vorname*</label>
+          <div class="control">
+            <input class="input is-medium" type="text" id="firstName" placeholder="" required minlength="2" maxlength="64" />
+          </div>
         </div>
+        <div class="column">
+          <label class="label">Dein Nachname*</label>
+          <div class="control">
+            <input class="input is-medium" type="text" id="lastName" placeholder="" required minlength="2" maxlength="64" />
+          </div>
+        </div>
+      </div>
     </div>
     <div class="field">
-        <label class="label">Über welche E-Mail Adresse kann ich dich erreichen?</label>
-        <div class="control">
-            <input class="input is-medium" type="email" placeholder="email@beispiel.de">
-        </div>
+      <label class="label">Über welche E-Mail Adresse kann ich dich erreichen?*</label>
+      <div class="control">
+        <input class="input is-medium" type="email" id="emailAddress" placeholder="email@beispiel.de" required />
+      </div>
     </div>
 
     <div class="columns">
-        <div class="column">
-            <label class="label">Wann ist der Termin deiner Hochzeit?</label>
-            <div class="control">
-                <input class="input is-medium" type="date" placeholder="">
-            </div>
+      <div class="column">
+        <label class="label">Wann ist der Termin deiner Hochzeit?</label>
+        <div class="control">
+          <input class="input is-medium" type="date" id="weddingDate" placeholder="" />
         </div>
-        <div class="column">
-            <label class="label">Um wie viel Uhr ist die Trauung?</label>
-            <div class="control">
-                <input class="input is-medium" type="time" placeholder="">
-            </div>
+      </div>
+      <div class="column">
+        <label class="label">Um wie viel Uhr musst du fertig sein?</label>
+        <div class="control">
+          <input class="input is-medium" type="time" id="weddingTime" placeholder="" />
         </div>
+      </div>
     </div>
 
     <div class="field">
-        <label class="label">Deine Nachricht an mich:</label>
-        <div class="control">
-            <textarea class="textarea is-medium" placeholder="..."></textarea>
-        </div>
+      <label class="label">Deine Nachricht an mich: (maximal 1000 Zeichen)</label>
+      <div class="control">
+        <textarea class="textarea is-medium" id="message" placeholder="..." maxlength="1000"></textarea>
+      </div>
     </div>
     <div class="field">
-        <div class="control">
-            <button class="button is-fullwidth is-medium is-primary">Anfrage jetzt absenden</button>
-        </div>
+      <div class="control">
+        <button class="button is-fullwidth is-medium is-primary" id="contactFormSubmitButton">Anfrage jetzt absenden</button>
+      </div>
     </div>
-</div>
-
+  </div>
+</form>

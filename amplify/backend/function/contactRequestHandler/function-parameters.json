@@ -1,0 +1,14 @@
+{
+  "lambdaLayers": [
+    {
+      "type": "ExternalLayer",
+      "arn": "arn:aws:lambda:eu-west-1:580247275435:layer:LambdaInsightsExtension:14"
+    }
+  ],
+  "environmentVariableList": [
+    {
+      "cloudFormationParameterName": "mailAddress",
+      "environmentVariableName": "MAIL_ADDRESS"
+    }
+  ]
+}

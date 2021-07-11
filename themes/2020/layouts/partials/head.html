@@ -3,54 +3,56 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
 <!--Title meta tags-->
-<title itemprop="name">{{if .IsHome}}{{ .Title }}{{else}}{{ .Title }} | {{ .Site.Title }}{{end}}</title>
-<meta property="og:title" content="{{if .IsHome}}{{ .Title }}{{else}}{{ .Title }} | {{ .Site.Title }}{{end}}" />
-<meta name="twitter:title" content="{{if .IsHome}}{{ .Title }}{{else}}{{ .Title }} | {{ .Site.Title }}{{end}}" />
-<meta itemprop="name" content="{{if .IsHome}}{{ .Title }}{{else}}{{ .Title }} | {{ .Site.Title }}{{end}}" />
-<meta name="application-name" content="{{if .IsHome}}{{ .Title }}{{else}}{{ .Title }} | {{ .Site.Title }}{{end}}" />
+<title itemprop="name">{{ if .IsHome }}{{ .Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+<meta property="og:title" content="{{ if .IsHome }}{{ .Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}" />
+<meta name="twitter:title" content="{{ if .IsHome }}{{ .Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}" />
+<meta itemprop="name" content="{{ if .IsHome }}{{ .Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}" />
+<meta name="application-name" content="{{ if .IsHome }}{{ .Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}" />
 <meta property="og:site_name" content="{{ .Site.Params.sitename }}" />
 <!--Description meta tags-->
-<meta name="description" content="{{if .IsHome}}{{ .Site.Params.description }}{{else}}{{ .Params.description }}{{end}}" />
-<meta itemprop="description" content="{{if .IsHome}}{{ .Site.Params.description }}{{else}}{{ .Params.description }}{{end}}" />
-<meta property="og:description" content="{{if .IsHome}}{{ .Site.Params.description }}{{else}}{{ .Params.description }}{{end}}" />
-<meta name="twitter:description" content="{{if .IsHome}}{{ .Site.Params.description }}{{else}}{{ .Params.description }}{{end}}" />
+<meta name="description" content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Params.description }}{{ end }}" />
+<meta itemprop="description" content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Params.description }}{{ end }}" />
+<meta property="og:description" content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Params.description }}{{ end }}" />
+<meta name="twitter:description" content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Params.description }}{{ end }}" />
 <!--Link meta tags-->
-<base href="{{ .Permalink }}">
+<base href="{{ .Permalink }}" />
 <link rel="canonical" href="{{ .Permalink }}" itemprop="url" />
 <meta name="url" content="{{ .Permalink }}" />
 <meta name="twitter:url" content="{{ .Permalink }}" />
 <meta property="og:url" content="{{ .Permalink }}" />
 <!--Language tags-->
-<meta property="og:locale" content="{{ .Language.Lang }}">
-<meta name="language" content="{{ .Language.LanguageName }}">
+<meta property="og:locale" content="{{ .Language.Lang }}" />
+<meta name="language" content="{{ .Language.LanguageName }}" />
 {{ range .AllTranslations }}
-<link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" title="{{ .Language.LanguageName }}">
+  <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" title="{{ .Language.LanguageName }}" />
 {{ end }}
+
 
 <!--Image tags-->
 {{ with .Params.image }}
-<meta itemprop="image" content="{{ . | absURL }}" />
-<meta property="og:image" content="{{ . | absURL }}" />
-<meta name="twitter:image" content="{{ . | absURL }}" />
-<meta name="twitter:image:src" content="{{ . | absURL }}" />
+  <meta itemprop="image" content="{{ . | absURL }}" />
+  <meta property="og:image" content="{{ . | absURL }}" />
+  <meta name="twitter:image" content="{{ . | absURL }}" />
+  <meta name="twitter:image:src" content="{{ . | absURL }}" />
 {{ else }}
-<meta itemprop="image" content="{{ .Site.Params.ogimage | absURL }}" />
-<meta property="og:image" content="{{ .Site.Params.ogimage | absURL }}" />
-<meta name="twitter:image" content="{{ .Site.Params.ogimage | absURL }}" />
-<meta name="twitter:image:src" content="{{ .Site.Params.ogimage | absURL }}" />
+  <meta itemprop="image" content="{{ .Site.Params.ogimage | absURL }}" />
+  <meta property="og:image" content="{{ .Site.Params.ogimage | absURL }}" />
+  <meta name="twitter:image" content="{{ .Site.Params.ogimage | absURL }}" />
+  <meta name="twitter:image:src" content="{{ .Site.Params.ogimage | absURL }}" />
 {{ end }}
+
 
 <!--Sitemap & RSS Feed Tags-->
 <link rel="sitemap" type="application/xml" title="Sitemap" href="{{ .Site.BaseURL }}sitemap.xml" />
 {{ with .OutputFormats.Get "RSS" }}
-<link href="{{ .Permalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
-<link href="{{ .Permalink }}" rel="feed" type="application/rss+xml" title="{{ $.Site.Title }}" />
+  <link href="{{ .Permalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
+  <link href="{{ .Permalink }}" rel="feed" type="application/rss+xml" title="{{ $.Site.Title }}" />
 {{ end }}
+
 
 <!--Page tags-->
 <meta property="og:type" content="website" />
-<meta name="author" content="{{ .Site.Params.author }}" />
-<script defer type="application/ld+json">
+<meta name="author" content="{{ .Site.Params.author }}" /><script defer type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "WebSite",
@@ -88,3 +90,5 @@
   rel="stylesheet"
   href="{{ $style.RelPermalink }}"
 />
+
+<script src="/js/main.bundle.js" async></script>

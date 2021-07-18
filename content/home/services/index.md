@@ -11,5 +11,5 @@ resources:
     name: 'Gästestyling'
   - src: schminkworkshop.jpg
     title: 'Szene eines Schminkworkshops'
-    name: 'Schminkworkshop'
+    name: 'Schmink-Workshop'
 ---

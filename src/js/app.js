@@ -104,7 +104,6 @@ async function sendCustomerRequest(firstName, lastName, emailAddress, weddingDat
     message: customerRequestMessage,
   };
 
-  console.log(customerRequest);
   const response = await fetch('https://api.sarahbonzelet.de/contact', {
     method: 'POST',
     mode: 'cors',

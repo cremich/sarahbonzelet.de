@@ -25,3 +25,5 @@ amplifytools.xcconfig
 
 themes/2020/static/js/main.bundle.js
 themes/2020/static/js/main.bundle.js.LICENSE.txt
+themes/2020/static/js/main.*.hot-update.js
+themes/2020/static/js/main.*.hot-update.json

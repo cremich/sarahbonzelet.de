@@ -4,7 +4,7 @@ const path = require('path');
 
 module.exports = {
   mode: 'development',
-  entry: './amplify-src/js/app.js',
+  entry: './src/js/app.js',
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'themes/2020/static/js'),

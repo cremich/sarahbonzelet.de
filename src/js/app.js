@@ -1,10 +1,4 @@
-import Amplify from '@aws-amplify/core';
-import API, { graphqlOperation } from '@aws-amplify/api';
 import validator from 'validator';
-import config from '../../aws-exports';
-import { createCustomerRequest } from './graphql/mutations';
-Amplify.configure(config);
-
 //TODO: add captcha
 
 function sanitizeFormValues() {
@@ -70,6 +64,8 @@ function initContactForm() {
 }
 
 function submitContactForm() {
+  document.getElementById('contactFormSubmitButton').classList.add('is-loading');
+
   const sanitizedFormValues = sanitizeFormValues();
   sendCustomerRequest(
     sanitizedFormValues.firstName,
@@ -78,20 +74,47 @@ function submitContactForm() {
     sanitizedFormValues.weddingDate,
     sanitizedFormValues.weddingTime,
     sanitizedFormValues.message
-  ).then(evt => {
-    console.log(evt);
-  });
+  )
+    .then(evt => {
+      window.location.replace(`${location.protocol}//${location.host}/danke`);
+    })
+    .catch(() => {
+      const submitButton = document.getElementById('contactFormSubmitButton');
+      submitButton.classList.remove('is-loading');
+      submitButton.disabled = true;
+      document.getElementById('errorNotification').classList.remove('is-hidden');
+    });
 }
 
 async function sendCustomerRequest(firstName, lastName, emailAddress, weddingDate, weddingTime, message) {
+  const customerRequestMessage = `
+  Nachname: ${lastName}
+  Vorname: ${firstName}
+  E-Mail Adresse: ${emailAddress}
+  
+  Tag der Hochzeit: ${new Date(weddingDate).toLocaleDateString('de')}
+  Uhrzeit: ${weddingTime}
+
+  Nachricht: 
+  ${message}
+  `;
+
   const customerRequest = {
-    name: `${firstName} ${lastName}`,
-    email: emailAddress,
-    message: message,
-    weddingDate: weddingDate,
-    weddingTime: weddingTime,
+    senderEmail: emailAddress,
+    message: customerRequestMessage,
   };
-  return await API.graphql(graphqlOperation(createCustomerRequest, { input: customerRequest }));
+
+  console.log(customerRequest);
+  const response = await fetch('https://api.sarahbonzelet.de/contact', {
+    method: 'POST',
+    mode: 'cors',
+    cache: 'no-cache',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(customerRequest),
+  });
+  return response.json();
 }
 
 const contactForm = document.getElementById('contactForm');

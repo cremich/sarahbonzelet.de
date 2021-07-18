@@ -6,7 +6,7 @@ theme = "2020"
 
 [params]
   author = "Sarah Bonzelet"
-  og_image = "/images/og.png"
+  ogimage = "/images/og.png"
   sitename = "Sarah Bonzelet - Hair & Make-Up"
   description = "Hair & Make-Up für dein Braut- und Gästestyling in Köln und Umgebung"
   facebook_url = "https://www.facebook.com/sarah.schminkt.koeln"

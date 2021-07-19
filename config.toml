@@ -49,10 +49,10 @@ theme = "2020"
     url = "/#meine-leistungen"
     weight = -90
   [[menu.main]]
-    identifier = "gallerie"
-    name = "Gallerie"
-    title = "Gallerie"
-    url = "/gallerie"
+    identifier = "galerie"
+    name = "Galerie"
+    title = "Galerie"
+    url = "/galerie"
     weight = -85    
   [[menu.main]]
     identifier = "preisliste"
@@ -85,10 +85,10 @@ theme = "2020"
     url = "/#meine-leistungen"
     weight = -90
   [[menu.footer]]
-    identifier = "gallerie"
-    name = "Gallerie"
-    title = "Gallerie"
-    url = "/gallerie"
+    identifier = "galerie"
+    name = "Galerie"
+    title = "Galerie"
+    url = "/galerie"
     weight = -85      
   [[menu.footer]]
     identifier = "preisliste"

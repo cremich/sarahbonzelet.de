@@ -1,6 +1,6 @@
 ---
-title: 'Gallerie'
-url: 'gallerie'
+title: 'Galerie'
+url: 'galerie'
 ---
 
 {{<gallery src="/images">}}

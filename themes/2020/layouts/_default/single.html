@@ -11,6 +11,13 @@
             {{ end }}
           {{ end }}
           {{ .Content }}
+          {{ with .Resources.Match "closer*.jpg" }}
+            {{ range . }}
+              {{ with .Resize "1024x" }}
+                <img class="img-responsive avatar has-image-border-primary is-full" src="{{ .Permalink }}" alt="{{ .Name }}" />
+              {{ end }}
+            {{ end }}
+          {{ end }}
         </div>
       </div>
     </div>

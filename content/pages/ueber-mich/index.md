@@ -13,3 +13,5 @@ Seit Anfang 2019 bin ich nun Visagistin und habe mich auf das Brautstyling spezi
 Wenn du mehr über mein Angebot erfahren möchtest, schau gerne mal bei meinen [Leistungen](/#meine-leistungen) vorbei oder schick mir eine unverbindliche Anfrage über mein [Kontaktformular](/kontakt) und erhalte meine Info-Broschüre.
 
 Erfahrungsgemäß sind Brautstylingtermine schnell ausgebucht, also warte nicht zu lange und sichere Dir Dein persönliches [Brautstyling](/services/brautstyling) bei mir!
+
+{{<gallery>}}

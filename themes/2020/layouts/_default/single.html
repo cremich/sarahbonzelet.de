@@ -7,11 +7,7 @@
         <div class="markdown has-text-weight-light column has-text-justified is-three-fifths is-offset-one-fifth">
           {{ with .Resources.GetMatch "teaser.jpg" }}
             {{ with .Resize "1024x" }}
-              <img
-                class="img-responsive avatar has-image-border-primary is-full is-hidden-mobile"
-                src="{{ .Permalink }}"
-                alt="{{ .Name }}"
-              />
+              <img class="img-responsive avatar has-image-border-primary is-full" src="{{ .Permalink }}" alt="{{ .Name }}" />
             {{ end }}
           {{ end }}
           {{ .Content }}

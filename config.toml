@@ -92,7 +92,7 @@ theme = "2020"
     weight = -85      
   [[menu.footer]]
     identifier = "preisliste"
-    name = "Preistliste"
+    name = "Preisliste"
     title = "Preisliste"
     url = "/preisliste"
     weight = -80    

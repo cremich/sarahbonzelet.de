@@ -7,6 +7,7 @@ function sanitizeFormValues() {
   const emailAddress = document.getElementById('emailAddress').value;
   const weddingDate = document.getElementById('weddingDate').value;
   const weddingTime = document.getElementById('weddingTime').value;
+  const location = document.getElementById('location').value;
   const message = document.getElementById('message').value;
 
   return {
@@ -15,6 +16,7 @@ function sanitizeFormValues() {
     emailAddress: validator.isEmail(emailAddress) ? validator.normalizeEmail(emailAddress) : '',
     weddingDate: validator.isISO8601(weddingDate, { strict: true }) ? weddingDate : '',
     weddingTime: validator.matches(weddingTime, /\d\d:\d\d/gm) ? weddingTime : '',
+    location: validator.isLength(location, { min: 2, max: 64 }) ? validator.escape(location) : '',
     message: validator.escape(message),
   };
 }
@@ -46,6 +48,19 @@ function initContactForm() {
     }
   });
 
+  const locationElement = document.getElementById('location');
+  locationElement.addEventListener('input', function (event) {
+    if (locationElement.validity.tooLong) {
+      locationElement.setCustomValidity('Bitte beschränke deine Eingabe auf maximal 64 Zeichen.');
+    } else if (locationElement.validity.tooShort) {
+      locationElement.setCustomValidity('Bitte erweitere deine Eingabe auf mindestens zwei Zeichen.');
+    } else if (locationElement.validity.valueMissing) {
+      llocationlement.setCustomValidity('Bitte trage die Adresse des Stylingortes hier ein.');
+    } else {
+      locationElement.setCustomValidity('');
+    }
+  });
+
   const emailElement = document.getElementById('emailAddress');
   emailElement.addEventListener('input', function (event) {
     if (emailElement.validity.typeMismatch) {
@@ -73,7 +88,8 @@ function submitContactForm() {
     sanitizedFormValues.emailAddress,
     sanitizedFormValues.weddingDate,
     sanitizedFormValues.weddingTime,
-    sanitizedFormValues.message
+    sanitizedFormValues.message,
+    sanitizedFormValues.location
   )
     .then(evt => {
       window.location.replace(`${location.protocol}//${location.host}/danke`);
@@ -86,7 +102,7 @@ function submitContactForm() {
     });
 }
 
-async function sendCustomerRequest(firstName, lastName, emailAddress, weddingDate, weddingTime, message) {
+async function sendCustomerRequest(firstName, lastName, emailAddress, weddingDate, weddingTime, message, location) {
   const customerRequestMessage = `
   Nachname: ${lastName}
   Vorname: ${firstName}
@@ -94,6 +110,7 @@ async function sendCustomerRequest(firstName, lastName, emailAddress, weddingDat
   
   Tag der Hochzeit: ${new Date(weddingDate).toLocaleDateString('de')}
   Uhrzeit: ${weddingTime}
+  Stylingort: ${location}
 
   Nachricht: 
   ${message}

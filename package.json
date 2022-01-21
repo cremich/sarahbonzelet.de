@@ -1,0 +1,36 @@
+{
+  "name": "root",
+  "private": true,
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "build": "lerna run build --stream",
+    "build:production": "lerna run build:production --stream",
+    "deploy": "lerna run deploy --stream",
+    "diff": "lerna run diff --stream",
+    "format": "lerna run format --stream --parallel",
+    "lint": "lerna run lint --stream --parallel",
+    "lint:ci": "lerna run lint:ci --stream --parallel",
+    "lint:fix": "lerna run lint:fix --stream --parallel",
+    "precommit": "lerna run precommit --stream  --concurrency 2",
+    "prepare": "husky install",
+    "prepush": "lerna run prepush --stream",
+    "release": "HUSKY=0 lerna version --yes",
+    "setup": "npm i && lerna bootstrap",
+    "setup:ci": "npm ci && lerna bootstrap --ci",
+    "test": "lerna run test --stream",
+    "test:ci": "lerna run test:ci --stream"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "16.1.0",
+    "@commitlint/config-conventional": "16.0.0",
+    "cz-conventional-changelog": "3.3.0",
+    "husky": "7.0.4",
+    "lerna": "4.0.0",
+    "prettier": "2.5.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

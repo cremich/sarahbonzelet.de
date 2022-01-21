@@ -1,0 +1,14 @@
+{
+  "packages": ["packages/*"],
+  "command": {
+    "version": {
+      "allowBranch": "main",
+      "conventionalCommits": true,
+      "exact": true,
+      "message": "chore: release %v [skip ci]",
+      "noCommitHooks": true,
+      "tagVersionPrefix": ""
+    }
+  },
+  "version": "0.0.0"
+}

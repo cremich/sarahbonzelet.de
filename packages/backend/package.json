@@ -1,0 +1,53 @@
+{
+  "name": "@sarahbonzelet.de/backend",
+  "version": "0.0.0",
+  "bin": {
+    "backend": "bin/backend.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "build:production": "npm run build",
+    "watch": "tsc -w",
+    "test": "jest",
+    "test:ci": "jest --coverage",
+    "cdk": "cdk",
+    "deploy": "cdk deploy --require-approval never --outputs-file outputs.json",
+    "diff": "cdk diff",
+    "format": "prettier --config .prettierrc.json '**/*.{js,ts,md}' --write",
+    "lint": "tsc --noEmit && eslint . --ext .ts,.tsx --quiet",
+    "lint:ci": "eslint . --ext .ts,.tsx --quiet",
+    "lint:fix": "npm run lint -- --fix",
+    "precommit": "tsc --noEmit && lint-staged",
+    "prepush": "jest"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "8.10.90",
+    "@types/jest": "27.4.0",
+    "@types/node": "17.0.10",
+    "@typescript-eslint/eslint-plugin": "5.10.0",
+    "@typescript-eslint/parser": "5.10.0",
+    "esbuild": "0.14.12",
+    "eslint": "8.7.0",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-plugin-jest": "25.7.0",
+    "jest": "27.4.7",
+    "ts-jest": "27.1.3",
+    "aws-cdk": "2.8.0",
+    "ts-node": "10.4.0",
+    "typescript": "4.5.5",
+    "lint-staged": "12.2.2",
+    "prettier": "2.5.1"
+  },
+  "dependencies": {
+    "aws-cdk-lib": "2.8.0",
+    "constructs": "^10.0.0",
+    "source-map-support": "^0.5.16"
+  },
+  "lint-staged": {
+    "*.{js,ts}": [
+      "prettier --write --ignore-unknown",
+      "eslint --fix",
+      "npm run test -- --bail --coverage=false --findRelatedTests"
+    ]
+  }
+}

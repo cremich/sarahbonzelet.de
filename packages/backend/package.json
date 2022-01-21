@@ -11,7 +11,8 @@
     "test": "jest",
     "test:ci": "jest --coverage",
     "cdk": "cdk",
-    "deploy": "cdk deploy --require-approval never --outputs-file outputs.json",
+    "deploy:dev": "cdk deploy sarah-bonzelet-de-dev --require-approval never --outputs-file outputs.json",
+    "deploy:prod": "cdk deploy sarah-bonzelet-de-prod --require-approval never --outputs-file outputs.json",
     "diff": "cdk diff",
     "format": "prettier --config .prettierrc.json '**/*.{js,ts,md}' --write",
     "lint": "tsc --noEmit && eslint . --ext .ts,.tsx --quiet",
@@ -39,6 +40,7 @@
     "prettier": "2.5.1"
   },
   "dependencies": {
+    "@aws-cdk/aws-apigatewayv2-alpha": "2.8.0-alpha.0",
     "aws-cdk-lib": "2.8.0",
     "constructs": "^10.0.0",
     "source-map-support": "^0.5.16"

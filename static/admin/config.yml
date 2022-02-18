@@ -1,0 +1,57 @@
+logo_url: https://www.sarahbonzelet.de/images/logo.png
+display_url: https://www.sarahbonzelet.de
+locale: 'de'
+backend:
+  name: github
+  branch: main
+  repo: cremich/sarahbonzelet.de
+media_folder: "static/images"
+collections:
+  - name: "pages"
+    label: "Seiten"
+    files:
+      - label: "Über mich"
+        name: "about"
+        file: "content/pages/ueber-mich/index.md"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Body, name: body, widget: markdown}
+      - label: "Preisliste"
+        name: "pricing"
+        file: "content/pages/pricing/index.md"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Body, name: body, widget: markdown}     
+      - label: "Datenschutz"
+        name: "dataprivacy"
+        file: "content/pages/datenschutz.html"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Body, name: body, widget: markdown}     
+      - label: "Impressum"
+        name: "impress"
+        file: "content/pages/impressum.html"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Body, name: body, widget: markdown}                                     
+  - name: "services"
+    label: "Dienstleistungen"
+    files:
+      - label: "Brautstyling"
+        name: "brautstyling"
+        file: "content/services/brautstyling/index.md"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Body, name: body, widget: markdown}
+      - label: "Gästestyling"
+        name: "gaestestyling"
+        file: "content/services/gaestestyling/index.md"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Body, name: body, widget: markdown}            
+      - label: "Schminkworkshop"
+        name: "workshop"
+        file: "content/services/schminkworkshop/index.md"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Body, name: body, widget: markdown}            

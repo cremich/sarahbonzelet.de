@@ -5,6 +5,7 @@ backend:
   name: github
   branch: main
   repo: cremich/sarahbonzelet.de
+  site_domain: cms.netlify.com
 media_folder: "static/images"
 collections:
   - name: "pages"

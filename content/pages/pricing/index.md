@@ -1,9 +1,9 @@
 ---
-title: 'Preisliste'
-description: 'Hier findest du eine übersicht meiner aktuellen Preise zum Braut- und Gästestyling.'
-url: 'preisliste'
+title: Preisliste
+description: Hier findest du eine übersicht meiner aktuellen Preise zum Braut-
+  und Gästestyling.
+url: preisliste
 ---
-
 ## Brautstyling
 
 {{<price "Make-up" "179€">}}
@@ -33,7 +33,7 @@ Haarschmuck oder Extensions werden separat berechnet.
 {{</small>}}
 
 {{<small>}}
-Hinzu kommt eine Fahrtkostenpauschale von 0,45€/km ab einer Entfernung von 10km sowie eine extra Pauschale in Höhe von 30€ bei einer Anfahrtszeit beim Kunden vor 8 Uhr.
+Hinzu kommt eine Fahrtkostenpauschale von 0,45€/km ab einer Entfernung von 10km sowie eine extra Pauschale in Höhe von 30€ bei einer Anfahrtszeit beim Kunden vor 7 Uhr.
 {{</small>}}
 
 {{<small>}}

@@ -21,4 +21,11 @@ describe("Website stack", () => {
       ],
     });
   });
+
+  test("Nested stack for contact form is created if target email address provided", () => {
+    const stack = new WebsiteStack(app, "website", {
+      contactFormRecipientEmailAddress: "me@example.com",
+    });
+    expect(stack.contactFormStack).not.toBeNull;
+  });
 });

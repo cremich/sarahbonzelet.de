@@ -1,6 +1,6 @@
 import { mockClient } from "aws-sdk-client-mock";
 import { SendEmailCommand, SESv2 } from "@aws-sdk/client-sesv2";
-import { handler } from "../../../../lib/contact-form/lambdas/send-email";
+import { handler } from "../../../lib/contact-form/lambdas/send-email";
 import { APIGatewayProxyEvent } from "aws-lambda";
 
 const sesMock = mockClient(SESv2);

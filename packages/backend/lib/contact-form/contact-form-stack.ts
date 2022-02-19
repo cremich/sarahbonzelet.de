@@ -7,22 +7,20 @@ import {
   aws_lambda_nodejs as lambdaNodejs,
   aws_lambda as lambda,
   aws_logs as logs,
+  aws_apigateway as apigw,
   Duration,
   NestedStack,
   NestedStackProps,
   Tags,
 } from "aws-cdk-lib";
-import * as apigw from "@aws-cdk/aws-apigatewayv2-alpha";
-import { HttpLambdaIntegration } from "@aws-cdk/aws-apigatewayv2-integrations-alpha";
 
 export interface ContactFormProps extends NestedStackProps {
-  apiGateway: apigw.HttpApi;
+  apiGateway: apigw.IRestApi;
   targetEmailAddress: string;
 }
 
 export class ContactFormStack extends NestedStack {
   public domainName: apigw.DomainName;
-  public httpApi: apigw.HttpApi;
 
   constructor(scope: Construct, id: string, props: ContactFormProps) {
     super(scope, id);
@@ -67,16 +65,10 @@ export class ContactFormStack extends NestedStack {
       },
     });
 
-    const contactFormDefaultIntegration = new HttpLambdaIntegration(
-      "contact-form-integration",
-      contactFormHandlerFunction
-    );
+    const contactFormDefaultIntegration = new apigw.LambdaIntegration(contactFormHandlerFunction);
 
-    props.apiGateway.addRoutes({
-      path: "/contact",
-      methods: [apigw.HttpMethod.POST],
-      integration: contactFormDefaultIntegration,
-    });
+    const contactResource = props.apiGateway.root.addResource("contact");
+    contactResource.addMethod("POST", contactFormDefaultIntegration);
 
     Tags.of(this).add("component", "contact-form");
   }

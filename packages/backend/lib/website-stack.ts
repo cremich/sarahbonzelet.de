@@ -1,4 +1,4 @@
-import { CfnOutput, Stack, StackProps, Tags } from "aws-cdk-lib";
+import { CfnOutput, NestedStack, Stack, StackProps, Tags } from "aws-cdk-lib";
 import { Construct } from "constructs";
 import { ApiStack } from "./api/api-stack";
 import { ContactFormStack } from "./contact-form/contact-form-stack";
@@ -9,6 +9,8 @@ interface WebsiteStackProps extends StackProps {
 }
 
 export class WebsiteStack extends Stack {
+  public contactFormStack: NestedStack;
+
   constructor(scope: Construct, id: string, props: WebsiteStackProps) {
     super(scope, id, props);
 
@@ -17,14 +19,14 @@ export class WebsiteStack extends Stack {
     });
 
     if (props.contactFormRecipientEmailAddress) {
-      new ContactFormStack(this, "contact-form", {
+      this.contactFormStack = new ContactFormStack(this, "contact-form", {
         apiGateway: apiStack.apiGateway,
         targetEmailAddress: props.contactFormRecipientEmailAddress,
       });
     }
 
     new CfnOutput(this, "default-api-endpoint", {
-      value: apiStack.apiGateway.apiEndpoint,
+      value: apiStack.apiGateway.url,
       description: "API Gateway default endpoint",
     });
 

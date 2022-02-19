@@ -1,6 +1,5 @@
-import { assertions, Stack } from "aws-cdk-lib";
-import { ContactFormStack } from "../../../lib/contact-form/contact-form-stack";
-import * as apigw from "@aws-cdk/aws-apigatewayv2-alpha";
+import { assertions, Stack, aws_apigateway as apigw } from "aws-cdk-lib";
+import { ContactFormStack } from "../../lib/contact-form/contact-form-stack";
 
 let stack: Stack;
 
@@ -11,7 +10,7 @@ describe("Contact form stack", () => {
 
   test("Resources are tagged with component tag", () => {
     const contactFormStack = new ContactFormStack(stack, "website", {
-      apiGateway: new apigw.HttpApi(stack, "apigw", {}),
+      apiGateway: new apigw.RestApi(stack, "apigw"),
       targetEmailAddress: "me@example.com",
     });
 
@@ -26,36 +25,72 @@ describe("Contact form stack", () => {
     });
   });
 
-  test("Lambda function is registered at /contact on api gateway", () => {
+  test("/contact resource is registered on api gateway", () => {
     new ContactFormStack(stack, "website", {
-      apiGateway: new apigw.HttpApi(stack, "apigw", {}),
+      apiGateway: new apigw.RestApi(stack, "apigw"),
       targetEmailAddress: "me@example.com",
     });
 
     const assert = assertions.Template.fromStack(stack);
-    assert.hasResourceProperties("AWS::ApiGatewayV2::Route", {
-      ApiId: {
-        Ref: "apigw88C2FCEE",
+    assert.hasResourceProperties("AWS::ApiGateway::Resource", {
+      ParentId: {
+        "Fn::GetAtt": ["apigw88C2FCEE", "RootResourceId"],
       },
-      RouteKey: "POST /contact",
-      AuthorizationType: "NONE",
-      Target: {
-        "Fn::Join": [
-          "",
-          [
-            "integrations/",
-            {
-              Ref: "apigwPOSTcontactcontactformintegration38C91EBE",
-            },
-          ],
-        ],
+      PathPart: "contact",
+      RestApiId: {
+        Ref: "apigw88C2FCEE",
       },
     });
   });
 
+  test("POST method /contact resource is integrated with lambda handler", () => {
+    new ContactFormStack(stack, "website", {
+      apiGateway: new apigw.RestApi(stack, "apigw"),
+      targetEmailAddress: "me@example.com",
+    });
+
+    const assert = assertions.Template.fromStack(stack);
+    assert.hasResourceProperties("AWS::ApiGateway::Method", {
+      HttpMethod: "POST",
+      ResourceId: {
+        Ref: "apigwcontact0DABBFA0",
+      },
+      RestApiId: {
+        Ref: "apigw88C2FCEE",
+      },
+      AuthorizationType: "NONE",
+      Integration: {
+        IntegrationHttpMethod: "POST",
+        Type: "AWS_PROXY",
+        Uri: {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                Ref: "AWS::Partition",
+              },
+              ":apigateway:",
+              {
+                Ref: "AWS::Region",
+              },
+              ":lambda:path/2015-03-31/functions/",
+              {
+                "Fn::GetAtt": [
+                  "websiteNestedStackwebsiteNestedStackResource72BFA48B",
+                  "Outputs.websitecontactformhandlerBE451811Arn",
+                ],
+              },
+              "/invocations",
+            ],
+          ],
+        },
+      },
+    });
+  });
   test("Target email address is configured as environment variable of the Lambda function", () => {
     const contactFormStack = new ContactFormStack(stack, "website", {
-      apiGateway: new apigw.HttpApi(stack, "apigw", {}),
+      apiGateway: new apigw.RestApi(stack, "apigw"),
       targetEmailAddress: "me@example.com",
     });
 
@@ -71,7 +106,7 @@ describe("Contact form stack", () => {
 
   test("Target email address is verified", () => {
     const contactFormStack = new ContactFormStack(stack, "website", {
-      apiGateway: new apigw.HttpApi(stack, "apigw", {}),
+      apiGateway: new apigw.RestApi(stack, "apigw"),
       targetEmailAddress: "me@example.com",
     });
 

@@ -1,0 +1,111 @@
+baseURL = "https://www.sarahbonzelet.de/"
+languageCode = "de-de"
+DefaultContentLanguage = "de"
+title = "Sarah Bonzelet - Hair & Make-Up"
+theme = "2020"
+timeout = "90s"
+
+[params]
+  author = "Sarah Bonzelet"
+  ogimage = "/images/og.jpg"
+  sitename = "Sarah Bonzelet - Hair & Make-Up"
+  description = "Hair & Make-Up für dein Braut- und Gästestyling in Köln und Umgebung"
+  facebook_url = "https://www.facebook.com/sarah.schminkt.koeln"
+  facebook_handle = "sarah.schminkt.koeln"
+  instagram_url = "https://www.instagram.com/sarah.schminkt"
+  instagram_handle = "@sarah.schminkt"
+  pinterest_url = "https://www.pinterest.de/sarahschminkt"
+  pinterest_handle = "sarahschminkt"
+
+[Author]
+  name = "Sarah Bonzelet"
+  email = "sarah.schminkt@gmail.com"
+  street = "Usinger Straße 63"
+  city = "51105 Köln"
+  mobile = "+49 171 194 44 62"
+
+[languages]
+  [languages.de]
+    languageName = "German"
+    languageCode = "de-de"
+    weight = 1
+
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    title = "Startseite"
+    url = "/"
+    weight = -110
+  [[menu.main]]
+    identifier = "aboutme"
+    name = "Über mich"
+    title = "Über mich"
+    url = "/ueber-mich"
+    weight = -100
+  [[menu.main]]
+    identifier = "services"
+    name = "Leistungen"
+    title = "Leistungen"
+    url = "/#meine-leistungen"
+    weight = -90
+  [[menu.main]]
+    identifier = "galerie"
+    name = "Galerie"
+    title = "Galerie"
+    url = "/galerie"
+    weight = -85    
+  [[menu.main]]
+    identifier = "preisliste"
+    name = "Preisliste"
+    title = "Preisliste"
+    url = "/preisliste"
+    weight = -80    
+  [[menu.main]]
+    identifier = "kontakt"
+    name = "Kontakt"
+    title = "Kontakt"
+    url = "/kontakt"
+    weight = -70        
+  [[menu.footer]]
+    identifier = "home"
+    name = "Home"
+    title = "Startseite"
+    url = "/"
+    weight = -110
+  [[menu.footer]]
+    identifier = "aboutme"
+    name = "Über mich"
+    title = "Über mich"
+    url = "/ueber-mich"
+    weight = -100
+  [[menu.footer]]
+    identifier = "services"
+    name = "Leistungen"
+    title = "Leistungen"
+    url = "/#meine-leistungen"
+    weight = -90
+  [[menu.footer]]
+    identifier = "galerie"
+    name = "Galerie"
+    title = "Galerie"
+    url = "/galerie"
+    weight = -85      
+  [[menu.footer]]
+    identifier = "preisliste"
+    name = "Preisliste"
+    title = "Preisliste"
+    url = "/preisliste"
+    weight = -80    
+  [[menu.footer]]
+    identifier = "kontakt"
+    name = "Kontakt"
+    title = "Kontakt"
+    url = "/kontakt"
+    weight = -70           
+  [[menu.footer]]
+    identifier = "sitemap"
+    name = "Sitemap"
+    title = "Sitemap"
+    url = "/sitemap.xml"
+    weight = -30

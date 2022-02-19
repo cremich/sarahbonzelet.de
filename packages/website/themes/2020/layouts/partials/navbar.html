@@ -1,0 +1,30 @@
+{{ $logo := resources.Get "images/logo.png" }}
+
+<nav id="main-navbar" class="navbar is-fixed-top">
+  <div class="container">
+      <div class="navbar-brand">
+          {{if not .IsHome}}
+          <a class="navbar-item is-hidden-mobile" href="{{ .Site.BaseURL }}">
+              <img src="{{ $logo.RelPermalink }}"/>
+          </a>
+          {{end}}
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+          </a>
+      </div>
+    <div class="navbar-menu" id="main-navbar-menu">
+      <div class="navbar-end">
+        {{ $currentPage := . }} {{ range .Site.Menus.main }}
+
+        <a class="has-text-weight-light navbar-item {{ if $currentPage.IsMenuCurrent "main" . }}is-active{{ end }}" href="{{ .URL }}">
+          {{ .Pre }}
+ <span>{{ .Name }}</span>
+        </a>
+        {{ end }}
+
+      </div>
+    </div>
+  </div>
+</nav>

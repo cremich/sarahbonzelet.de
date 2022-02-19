@@ -1,0 +1,11 @@
+@import '_variables.scss';
+
+{{ $heroImageResource := resources.Get "images/hero.jpg" }}
+{{ $heroImage := $heroImageResource.Resize "2048x" }}
+
+$heroImageDesktop: "{{ $heroImage.RelPermalink }}";
+
+@import 'node_modules/bulma/bulma.sass';
+@import '_2020.scss';
+
+

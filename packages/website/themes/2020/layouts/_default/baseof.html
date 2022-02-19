@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#" lang="{{ .Language }}">
+  <head itemscope itemtype="{{ .Site.BaseURL }}">
+    {{- partial "head.html" . -}}
+  </head>
+  <body>
+    {{- partial "header.html" . -}}
+
+    <div id="content">
+      {{- block "main" . }}{{- end }}
+
+    </div>
+    {{- partial "footer.html" . -}}
+
+  </body>
+</html>

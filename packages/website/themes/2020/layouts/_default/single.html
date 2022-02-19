@@ -1,0 +1,25 @@
+{{ define "main" }}
+  {{- partial "navbar.html" . -}}
+  <div class="section">
+    <div class="container">
+      <h1 class="title is-1 has-text-centered has-text-primary is-family-secondary">{{ .Title | markdownify }}</h1>
+      <div class="columns">
+        <div class="markdown has-text-weight-light column has-text-justified is-three-fifths is-offset-one-fifth">
+          {{ with .Resources.GetMatch "teaser.jpg" }}
+            {{ with .Resize "1024x" }}
+              <img class="img-responsive avatar has-image-border-primary is-full" src="{{ .Permalink }}" alt="{{ .Name }}" />
+            {{ end }}
+          {{ end }}
+          {{ .Content }}
+          {{ with .Resources.Match "closer*.jpg" }}
+            {{ range . }}
+              {{ with .Resize "1024x" }}
+                <img class="img-responsive avatar has-image-border-primary is-full" src="{{ .Permalink }}" alt="{{ .Name }}" />
+              {{ end }}
+            {{ end }}
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+{{ end }}

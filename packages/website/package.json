@@ -1,0 +1,29 @@
+{
+  "name": "@sarahbonzelet.de/website",
+  "version": "0.0.0",
+  "dependencies": {
+    "autoprefixer": "^10.2.6",
+    "bulma": "^0.9.3",
+    "postcss-cli": "^7.1.2",
+    "validator": "^13.6.0"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^9.0.1",
+    "lint-staged": "12.2.2",
+    "prettier": "2.5.1",
+    "prettier-plugin-go-template": "0.0.11",
+    "webpack": "5.44.0",
+    "webpack-cli": "4.7.2",
+    "webpack-dev-server": "3.11.2"
+  },
+  "lint-staged": {
+    "*.{js,css,md}": "prettier --write"
+  },
+  "scripts": {
+    "build:production": "webpack --mode=production && hugo",
+    "build": "webpack --mode=development --watch && hugo",
+    "watch": "webpack --mode=development --watch",
+    "start": "hugo serve",
+    "precommit": "webpack --mode=production && lint-staged"
+  }
+}

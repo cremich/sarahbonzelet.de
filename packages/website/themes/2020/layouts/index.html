@@ -1,0 +1,72 @@
+{{ define "main" }}
+  {{ $logo := resources.Get "images/logo.png" }}
+
+
+  <section class="hero home-hero">
+    <div class="hero-head">
+      {{- partial "navbar.html" . -}}
+    </div>
+    <div class="hero-body">
+      <div class="hero-logo">
+        <img src="{{ $logo.RelPermalink }}" width="{{ $logo.Width }}" height="{{ $logo.Height }}" />
+      </div>
+    </div>
+  </section>
+  {{ with .Site.GetPage "/home/about" }}
+    <div class="section has-background-white-ter" id="{{ .Page.Params.anchor }}">
+      <div class="container">
+        <div class="columns is-vcentered">
+          <div class="markdown has-text-weight-light column has-text-justified home-about is-three-fifths pt-0">
+            <h2 class="title is-1 has-text-primary is-family-secondary">{{ .Title | markdownify }}</h2>
+            {{ .Content }}
+          </div>
+          <div class="column">
+            {{ with .Resources.GetMatch "portrait.jpg" }}
+              {{ with .Resize "1024x" }}
+                <img class="img-responsive avatar has-image-border-white" src="{{ .Permalink }}" alt="{{ .Name }}" height="750" />
+              {{ end }}
+            {{ end }}
+          </div>
+        </div>
+        <div class="columns is-hidden-mobile"></div>
+      </div>
+    </div>
+  {{ end }}
+
+  {{ with .Site.GetPage "/home/services" }}
+    {{ $brautstyling := .Site.GetPage "/services/brautstyling" }}
+    {{ $gastestyling := .Site.GetPage "/services/gaestestyling" }}
+    {{ $schminkworkshop := .Site.GetPage "/services/schminkworkshop" }}
+    {{ $serviceRef := "" }}
+    <div class="section" id="{{ .Page.Params.anchor }}">
+      <div class="container">
+        <h2 class="title is-1 has-text-centered has-text-primary is-family-secondary">{{ .Title | markdownify }}</h2>
+        <div class="columns">
+          {{ with .Resources.ByType "image" }}
+            {{ range . }}
+              <div class="column">
+                {{ with .Resize "600x" }}
+                  <div class="service-teaser">
+                    {{ if eq .Name "Brautstyling" }}
+                      {{ $serviceRef = $brautstyling.RelPermalink }}
+                    {{ end }}
+                    {{ if eq .Name "Gästestyling" }}
+                      {{ $serviceRef = $gastestyling.RelPermalink }}
+                    {{ end }}
+                    {{ if eq .Name "Schmink-Workshop" }}
+                      {{ $serviceRef = $schminkworkshop.RelPermalink }}
+                    {{ end }}
+                    <a href="{{ $serviceRef }}" class="has-text-white">
+                      <img src="{{ .Permalink }}" alt="{{ .Title }}" width="100%" class="has-image-border-primary" />
+                      <div class="has-text-weight-light centered is-size-2 is-uppercase">{{ .Name }}</div>
+                    </a>
+                  </div>
+                {{ end }}
+              </div>
+            {{ end }}
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  {{ end }}
+{{ end }}

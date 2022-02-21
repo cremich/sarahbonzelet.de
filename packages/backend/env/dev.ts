@@ -13,6 +13,9 @@ export const config = {
             domainName: "sarahbonzelet.de",
             subdomain: "dev",
           },
+          accessControlSettings: {
+            globalBasicAuth: true,
+          },
           github: {
             branch: process.env.AMPLIFY_GITHUB_BRANCH || "main",
             oauthSecretName: process.env.AMPLIFY_GITHUB_OAUTHSECRET_NAME || "",

@@ -14,6 +14,9 @@ export interface AmplifyStackProps extends NestedStackProps {
     branch: string;
     oauthSecretName: string;
   };
+  accessControlSettings?: {
+    globalBasicAuth: boolean;
+  };
 }
 
 export class AmplifyStack extends NestedStack {
@@ -31,6 +34,10 @@ export class AmplifyStack extends NestedStack {
         AMPLIFY_MONOREPO_APP_ROOT: "packages/website",
         BUILD_ENV: props.buildSettings.buildEnv,
       },
+      basicAuth:
+        props.accessControlSettings && props.accessControlSettings.globalBasicAuth === true
+          ? amplify.BasicAuth.fromGeneratedPassword("guest")
+          : undefined,
     });
 
     const branch = amplifyApp.addBranch(props.github.branch);

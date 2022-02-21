@@ -15,6 +15,9 @@ interface WebsiteStackProps extends StackProps {
       subdomain: string;
       domainName: string;
     };
+    accessControlSettings?: {
+      globalBasicAuth: boolean;
+    };
     github: {
       branch: string;
       oauthSecretName: string;
@@ -45,6 +48,7 @@ export class WebsiteStack extends Stack {
         buildSettings: props.amplify.buildSettings,
         domainSettings: props.amplify.domainSettings,
         github: props.amplify.github,
+        accessControlSettings: props.amplify.accessControlSettings,
       });
     }
 

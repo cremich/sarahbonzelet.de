@@ -11,4 +11,17 @@ export const config = {
     (() => {
       throw new Error("Environment var 'API_DOMAIN_NAME' not found.");
     })(),
+  amplify: {
+    buildSettings: {
+      buildEnv: "production",
+    },
+    domainSettings: {
+      domainName: "sarahbonzelet.de",
+      subdomain: "www",
+    },
+    github: {
+      branch: process.env.AMPLIFY_GITHUB_BRANCH || "main",
+      oauthSecretName: process.env.AMPLIFY_GITHUB_OAUTHSECRET_NAME || "",
+    },
+  },
 };

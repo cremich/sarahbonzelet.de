@@ -13,7 +13,7 @@ applications:
             - npm ci
         build:
           commands:
-            - npm run-script build
+            - npm run-script build:$BUILD_ENV
       artifacts:
         baseDirectory: public
         files:

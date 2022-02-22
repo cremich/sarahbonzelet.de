@@ -122,7 +122,7 @@ async function sendCustomerRequest(firstName, lastName, emailAddress, weddingDat
     message: customerRequestMessage,
   };
 
-  const apiHost = location.host === 'www.sarahbonzelet.de' ? 'api.sarahbonzelet.de' : 'api-dev.sarahbonzelet.de';
+  const apiHost = window.location.host === 'www.sarahbonzelet.de' ? 'api.sarahbonzelet.de' : 'api-dev.sarahbonzelet.de';
 
   const response = await fetch(`https://${apiHost}/contact`, {
     method: 'POST',

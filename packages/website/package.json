@@ -2,13 +2,13 @@
   "name": "@sarahbonzelet.de/website",
   "version": "0.0.0",
   "dependencies": {
-    "autoprefixer": "^10.4.2",
-    "bulma": "^0.9.3",
-    "postcss-cli": "^9.1.0",
-    "validator": "^13.6.0"
+    "autoprefixer": "10.4.2",
+    "bulma": "0.9.3",
+    "postcss-cli": "9.1.0",
+    "validator": "13.6.0"
   },
   "devDependencies": {
-    "copy-webpack-plugin": "^9.0.1",
+    "copy-webpack-plugin": "9.0.1",
     "lint-staged": "12.3.4",
     "prettier": "2.5.1",
     "prettier-plugin-go-template": "0.0.11",

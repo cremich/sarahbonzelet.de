@@ -11,7 +11,7 @@ export class GithubStack extends Stack {
       provider: provider, // reference into the OIDC provider
       owner: "cremich", // your repository owner (organization or user) name
       repo: "sarahbonzelet.de", // your repository name (without the owner name)
-      filter: "ref:refs/heads/main", // JWT sub suffix filter, defaults to '*'
+      // filter: "ref:refs/heads/main", // JWT sub suffix filter, defaults to '*'
     });
 
     deployRole.addManagedPolicy(iam.ManagedPolicy.fromAwsManagedPolicyName("AdministratorAccess"));

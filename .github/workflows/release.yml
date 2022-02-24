@@ -45,8 +45,6 @@ jobs:
     permissions:
       id-token: write
       contents: read
-    env:
-      CONTACT_FORM_RECIPIENT_EMAIL: ${{ secrets.CONTACT_FORM_RECIPIENT_EMAIL}}
     steps:
       - name: Checkout source code
         uses: actions/checkout@v2
@@ -65,3 +63,5 @@ jobs:
           aws-region: ${{ secrets.AWS_REGION }}  
       - name: Deploy application
         run: npm run-script deploy:prod       
+        env:
+          CONTACT_FORM_RECIPIENT_EMAIL: ${{ secrets.CONTACT_FORM_RECIPIENT_EMAIL}}

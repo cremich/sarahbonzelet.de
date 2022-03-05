@@ -6,6 +6,8 @@ resources:
     title: 'Portrait von Sarah Bonzelet'
   - src: closer.jpg
     title: 'Portrait von Sarah Bonzelet'
+_build:
+  publishResources: false
 ---
 
 Vor meiner Arbeit als Visagistin habe ich Erziehungswissenschaften studiert und lange Zeit mit Kindern gearbeitet. Als ich jedoch 2016 meinen Heiratsantrag bekam und schwanger wurde, hat sich alles geändert. Durch ein Beschäftigungsverbot hatte ich seeehr viel Zeit und somit habe ich meine freie Zeit genutzt, um meiner Leidenschaft nachzugehen, dem Schminken. Ich wollte mich für meine eigene Hochzeit unbedingt selbst schminken. Also nutzte ich jede freie Minute, um mich weiterzubilden. Am Anfang viel über Youtube aber als ich immer mehr Feedback zu meinen Looks bekam, entschloss ich mich eine Ausbildung zur Visagistin an der Pro Academy in Köln zu machen.

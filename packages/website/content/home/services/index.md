@@ -12,4 +12,6 @@ resources:
   - src: schminkworkshop.jpg
     title: 'Szene eines Schminkworkshops'
     name: 'Schmink-Workshop'
+_build:
+  publishResources: false
 ---

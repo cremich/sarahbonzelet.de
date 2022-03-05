@@ -1,6 +1,8 @@
 ---
 title: 'Gästestyling'
 anchor: 'gaestestyling'
+_build:
+  publishResources: false
 ---
 
 Deine Gäste sollen auch in den Genuss eines professionellen Stylings kommen oder der Bräutigam möchte ein leichtes Touch Up, um wacher und frischer auszusehen?

@@ -28,4 +28,16 @@ describe("Website stack", () => {
     });
     expect(stack.contactFormStack).not.toBeNull;
   });
+
+  test("Nested stack for hosting is created if requested", () => {
+    const stack = new WebsiteStack(app, "website", {
+      hosting: {
+        domainSettings: {
+          domainName: "example.com",
+          subdomain: "www",
+        },
+      },
+    });
+    expect(stack.hostingStack).not.toBeNull;
+  });
 });

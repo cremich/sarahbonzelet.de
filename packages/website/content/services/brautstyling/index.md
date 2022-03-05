@@ -1,6 +1,8 @@
 ---
 title: 'Dein persönliches Brautstyling'
 anchor: 'brautstyling'
+_build:
+  publishResources: false
 ---
 
 Erst einmal wünsche ich dir alles Gute zur Verlobung! Denn wenn du auf meiner Internetseite stöberst, bist du bestimmt auf der Suche nach einer Stylistin für Deine Hochzeit.

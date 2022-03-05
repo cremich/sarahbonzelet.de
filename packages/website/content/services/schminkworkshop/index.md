@@ -1,6 +1,8 @@
 ---
 title: 'Schminkworkshop'
 anchor: 'schminkworkshop'
+_build:
+  publishResources: false
 ---
 
 Egal ob als Mädelsabend, Geburtstagsüberraschung oder JGA. Der Schminkworkshop ist das perfekte Warm-up für Eure Partynacht.

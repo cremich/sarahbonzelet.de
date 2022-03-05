@@ -5,6 +5,8 @@ headless: true
 resources:
   - src: profile.jpg
     title: 'Portrait von Sarah Bonzelet'
+_build:
+  publishResources: false
 ---
 
 Hallo, ich bin Sarah. Ich lebe mit meinem Mann und unseren zwei Kindern in Köln op d’r Schäll Sick, wie man hier so schön sagt.

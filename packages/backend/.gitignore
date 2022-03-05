@@ -12,3 +12,4 @@ coverage
 outputs.json
 
 .vscode
+.DS_Store

@@ -53,7 +53,7 @@ describe("Api stack", () => {
             },
             ResponseTemplates: {
               "application/json":
-                '#set($origin = $input.params("Origin"))\n#if($origin == "") #set($origin = $input.params("origin")) #end\n#if($origin.matches("http://api.example.com"))\n  #set($context.responseOverride.header.Access-Control-Allow-Origin = $origin)\n#end',
+                '#set($origin = $input.params().header.get("Origin"))\n#if($origin == "") #set($origin = $input.params().header.get("origin")) #end\n#if($origin.matches("http://api.example.com"))\n  #set($context.responseOverride.header.Access-Control-Allow-Origin = $origin)\n#end',
             },
             StatusCode: "204",
           },

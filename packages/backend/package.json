@@ -1,6 +1,6 @@
 {
   "name": "@sarahbonzelet.de/backend",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "bin": {
     "backend": "bin/backend.js"
   },

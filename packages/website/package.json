@@ -1,6 +1,6 @@
 {
   "name": "@sarahbonzelet.de/website",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "dependencies": {
     "autoprefixer": "10.4.2",
     "bulma": "0.9.3",

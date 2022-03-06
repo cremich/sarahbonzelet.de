@@ -9,7 +9,7 @@
       "exact": true,
       "message": "chore: release %v [skip ci]",
       "noCommitHooks": true,
-      "tagVersionPrefix": ""
+      "tagVersionPrefix": "v"
     }
   },
   "version": "0.1.0"

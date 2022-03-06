@@ -73,5 +73,23 @@ jobs:
         env:
           CONTACT_FORM_RECIPIENT_EMAIL: ${{ secrets.CONTACT_FORM_RECIPIENT_EMAIL}}
           HOSTING_ENABLED: true
+
+  release:
+    runs-on: ubuntu-latest
+    needs: [build,deployment-dev]
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ env.NODE_VESION }}                
+      - name: Install dependencies
+        run: npm run-script setup:ci
       - name: Release version
         run: npm run-script release

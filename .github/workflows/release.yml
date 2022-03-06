@@ -56,6 +56,8 @@ jobs:
           node-version: "16.x"  
       - name: Install dependencies
         run: npm run-script setup:ci
+      - name: Build sources in dev profile
+        run: npm run-script build:dev        
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:

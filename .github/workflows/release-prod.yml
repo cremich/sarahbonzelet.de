@@ -3,7 +3,7 @@ name: Release to production
 on:
   push:
     tags:
-      - v*
+      - 'v*'
 
 env:
   NODE_VERSION: 16.x

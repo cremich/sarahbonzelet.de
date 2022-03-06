@@ -73,3 +73,5 @@ jobs:
         env:
           CONTACT_FORM_RECIPIENT_EMAIL: ${{ secrets.CONTACT_FORM_RECIPIENT_EMAIL}}
           HOSTING_ENABLED: true
+      - name: Release version
+        run: npm run-script release

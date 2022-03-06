@@ -7,18 +7,4 @@ updates:
       interval: "daily"
     commit-message:
       prefix: "build"
-      include: "scope"
-  - package-ecosystem: "npm"
-    directory: "/packages/backend"
-    schedule:
-      interval: "daily" 
-    commit-message:
-      prefix: "build"
-      include: "scope"
-  - package-ecosystem: "npm"
-    directory: "/packages/website"
-    schedule:
-      interval: "daily"     
-    commit-message:
-      prefix: "build"  
-      include: "scope"         
+      include: "scope" 

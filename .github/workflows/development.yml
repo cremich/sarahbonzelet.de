@@ -1,0 +1,71 @@
+
+name: Development
+on:
+  pull_request:
+    types:
+      - opened
+      - edited
+      - synchronize
+      - reopened
+
+env:
+  NODE_VERSION: 16.x
+  HUGO_VERSION: '0.92.2'
+
+jobs:
+  test:
+    name: Test application
+    runs-on: ubuntu-latest
+    steps:
+      - name: "☁️ checkout repository"
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: "🔧 setup node"
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: "🔧 setup Hugo"
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: ${{ env.HUGO_VERSION }}
+          extended: true    
+
+      - name: "📦 install dependencies"
+        run: npm run-script setup:ci
+
+      - name: "🏗 Build sources"
+        run: npm run-script build
+
+      - name: "🔍 run tests"
+        run: npm run-script test:ci
+        env:
+          CI: true
+
+      - name: "🌦 Upload coverage to Codecov"
+        uses: codecov/codecov-action@v2.1.0          
+
+  lint:
+    name: Code standards
+    runs-on: ubuntu-latest
+    steps:
+      - name: "☁️ checkout repository"
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: "🔧 setup node"
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: "🔧 install npm@latest"
+        run: npm i -g npm@latest
+
+      - name: "📦 install dependencies"
+        run: npm run-script setup:ci
+
+      - name: "🔍 lint code"
+        run: npm run-script lint:ci

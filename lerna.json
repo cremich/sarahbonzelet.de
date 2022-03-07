@@ -1,13 +1,11 @@
 {
-  "packages": [
-    "packages/*"
-  ],
+  "packages": ["packages/*"],
   "command": {
     "version": {
       "allowBranch": "main",
       "conventionalCommits": true,
       "exact": true,
-      "message": "chore: release %v [skip ci]",
+      "message": "chore: release %v",
       "noCommitHooks": true,
       "tagVersionPrefix": "v"
     }

@@ -1,5 +1,7 @@
 {
-  "packages": ["packages/*"],
+  "packages": [
+    "packages/*"
+  ],
   "command": {
     "version": {
       "allowBranch": "main",
@@ -10,5 +12,5 @@
       "tagVersionPrefix": "v"
     }
   },
-  "version": "0.2.1"
+  "version": "0.2.2"
 }

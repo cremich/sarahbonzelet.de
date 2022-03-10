@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/cremich/sarahbonzelet.de/compare/v0.2.3...v0.3.0) (2022-03-10)
+
+
+### Features
+
+* **website:** update travel flat rate description in pricing page ([4bc68d3](https://github.com/cremich/sarahbonzelet.de/commit/4bc68d3f209062acf0f737dcf25fbd629abcd428))
+
+
+
+
+
 ## [0.2.3](https://github.com/cremich/sarahbonzelet.de/compare/v0.2.2...v0.2.3) (2022-03-08)
 
 **Note:** Version bump only for package @sarahbonzelet.de/website

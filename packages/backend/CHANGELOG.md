@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/cremich/sarahbonzelet.de/compare/v0.2.3...v0.3.0) (2022-03-10)
+
+
+### Features
+
+* **backend:** add github stack to allow oidc based assume role ([ea131f7](https://github.com/cremich/sarahbonzelet.de/commit/ea131f7d8cc610f86cb99678bcc77c110fe529ea))
+
+
+
+
+
 ## [0.2.3](https://github.com/cremich/sarahbonzelet.de/compare/v0.2.2...v0.2.3) (2022-03-08)
 
 **Note:** Version bump only for package @sarahbonzelet.de/backend

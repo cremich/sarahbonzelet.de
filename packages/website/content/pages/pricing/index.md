@@ -34,7 +34,7 @@ Haarschmuck oder Extensions werden separat berechnet.
 {{</small>}}
 
 {{<small>}}
-Hinzu kommt eine Fahrtkostenpauschale von 0,45€/km ab einer Entfernung von 10km sowie eine extra Pauschale in Höhe von 30€ bei einer Anfahrtszeit beim Kunden vor 7 Uhr.
+Hinzu kommt eine Fahrtkostenpauschale von 0,60€/km sowie eine extra Pauschale in Höhe von 30€ bei einer Anfahrtszeit beim Kunden vor 7 Uhr.
 {{</small>}}
 
 {{<small>}}

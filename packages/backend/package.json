@@ -33,7 +33,7 @@
     "aws-sdk-client-mock": "0.6.2",
     "aws-xray-sdk": "3.3.4",
     "esbuild": "0.14.25",
-    "eslint": "8.10.0",
+    "eslint": "8.11.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-plugin-jest": "26.1.1",
     "jest": "27.5.1",

@@ -4,8 +4,9 @@
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "build": "lerna run build --stream",
-    "build:production": "lerna run build:production --stream",
-    "deploy:dev": "lerna run deploy:dev --stream",
+    "build:uat": "lerna run build:uat --stream",
+    "build:prod": "lerna run build:prod --stream",
+    "deploy:uat": "lerna run deploy:dev --stream",
     "deploy:prod": "lerna run deploy:prod --stream",
     "diff": "lerna run diff --stream",
     "format": "lerna run format --stream --parallel",

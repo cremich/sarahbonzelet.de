@@ -4,7 +4,7 @@ const path = require('path');
 
 module.exports = env => {
   let envPath = './.env';
-  if (env.production) {
+  if (env.prod) {
     envPath = './.env.prod';
   }
   if (env.uat) {

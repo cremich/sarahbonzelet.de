@@ -20,8 +20,9 @@
     "*.{js,css,md}": "prettier --write"
   },
   "scripts": {
-    "build:production": "webpack --mode=production && hugo --minify",
-    "build": "webpack --mode=development && hugo --config config-dev.toml",
+    "build:prod": "webpack --mode=production && hugo --minify",
+    "build:uat": "webpack --mode=production && hugo --config config-uat.toml",
+    "build": "webpack --mode=development && hugo",
     "watch": "webpack --mode=development --watch",
     "start": "hugo serve",
     "precommit": "webpack --mode=production && lint-staged"

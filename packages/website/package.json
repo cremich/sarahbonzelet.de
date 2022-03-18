@@ -23,6 +23,7 @@
     "build:prod": "webpack --mode=production && hugo --minify",
     "build:uat": "webpack --mode=production && hugo --config config-uat.toml",
     "build": "webpack --mode=development && hugo",
+    "deploy:dev": "npm run-script start",
     "watch": "webpack --mode=development --watch",
     "start": "hugo serve",
     "precommit": "webpack --mode=production && lint-staged"

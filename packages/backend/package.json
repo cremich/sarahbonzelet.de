@@ -12,6 +12,7 @@
     "test": "jest",
     "test:ci": "jest --coverage",
     "cdk": "cdk",
+    "deploy:dev": "cdk deploy sarah-bonzelet-de-dev --require-approval never --outputs-file outputs.json",
     "deploy:uat": "cdk deploy sarah-bonzelet-de-uat --require-approval never --outputs-file outputs.json",
     "deploy:prod": "cdk deploy sarah-bonzelet-de-prod --require-approval never --outputs-file outputs.json",
     "diff": "cdk diff",

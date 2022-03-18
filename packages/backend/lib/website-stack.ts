@@ -27,7 +27,7 @@ export class WebsiteStack extends Stack {
 
     const apiStack = new ApiStack(this, "api", {
       apiDomainName: props.apiDomainName,
-      corsAllowedOrigins: ["dev.sarahbonzelet.de"],
+      corsAllowedOrigins: ["uat.sarahbonzelet.de", "www.sarahbonzelet.de"],
     });
 
     if (props.contactFormRecipientEmailAddress) {

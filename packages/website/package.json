@@ -9,6 +9,7 @@
   },
   "devDependencies": {
     "copy-webpack-plugin": "10.2.4",
+    "dotenv-webpack": "7.1.0",
     "lint-staged": "12.3.5",
     "prettier": "2.5.1",
     "prettier-plugin-go-template": "0.0.11",
@@ -20,11 +21,11 @@
     "*.{js,css,md}": "prettier --write"
   },
   "scripts": {
-    "build:prod": "webpack --mode=production && hugo --minify",
-    "build:uat": "webpack --mode=production && hugo --config config-uat.toml",
-    "build": "webpack --mode=development && hugo",
+    "build:prod": "webpack --env prod --mode=production && hugo --minify",
+    "build:uat": "webpack --env uat --mode=production && hugo --config config-uat.toml",
+    "build": "webpack --env dev --mode=development && hugo",
     "deploy:dev": "npm run-script start",
-    "watch": "webpack --mode=development --watch",
+    "watch": "webpack --env dev --mode=development --watch",
     "start": "hugo serve",
     "precommit": "webpack --mode=production && lint-staged"
   }

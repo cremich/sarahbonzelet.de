@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.4](https://github.com/cremich/sarahbonzelet.de/compare/v0.3.3...v0.3.4) (2022-03-18)
+
+
+### Bug Fixes
+
+* **backend:** add uat and www subdomains to allowed origins for CORS ([0656b44](https://github.com/cremich/sarahbonzelet.de/commit/0656b44a7d3015bbab580cf46c236b9d716ee02f))
+
+
+
+
+
 ## [0.3.3](https://github.com/cremich/sarahbonzelet.de/compare/v0.3.2...v0.3.3) (2022-03-18)
 
 **Note:** Version bump only for package @sarahbonzelet.de/backend

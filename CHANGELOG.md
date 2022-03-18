@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.4](https://github.com/cremich/sarahbonzelet.de/compare/v0.3.3...v0.3.4) (2022-03-18)
+
+
+### Bug Fixes
+
+* **backend:** add uat and www subdomains to allowed origins for CORS ([0656b44](https://github.com/cremich/sarahbonzelet.de/commit/0656b44a7d3015bbab580cf46c236b9d716ee02f))
+* **website:** use api-uat.sarahbonzelet.de as api host on uat stage ([630b337](https://github.com/cremich/sarahbonzelet.de/commit/630b337cae865f90e35a8f9758dfbf9cb449ea4c))
+
+
+
+
+
 ## [0.3.3](https://github.com/cremich/sarahbonzelet.de/compare/v0.3.2...v0.3.3) (2022-03-18)
 
 **Note:** Version bump only for package root

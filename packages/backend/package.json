@@ -48,7 +48,7 @@
   "dependencies": {
     "@aws-cdk/aws-amplify-alpha": "2.13.0-alpha.0",
     "aws-cdk-lib": "2.17.0",
-    "constructs": "10.0.81",
+    "constructs": "10.0.98",
     "dotenv": "16.0.0",
     "source-map-support": "0.5.21"
   },

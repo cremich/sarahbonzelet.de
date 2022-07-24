@@ -30,6 +30,8 @@ export class ApiStack extends NestedStack {
     //see https://stackoverflow.com/a/51992342/11239808
     const allowOrigins = [...localhostOrigins, ...(props.corsAllowedOrigins || [])];
     const api = new apigw.RestApi(this, "api-gateway", {
+      restApiName: props.apiDomainName ? props.apiDomainName : "api.sarahbonzelet.de",
+      description: "API for sarahbonzelet.de",
       defaultCorsPreflightOptions: {
         allowHeaders: ["content-type"],
         allowMethods: ["GET", "HEAD", "OPTIONS", "POST"],
@@ -40,6 +42,9 @@ export class ApiStack extends NestedStack {
       deployOptions: {
         metricsEnabled: true,
         tracingEnabled: true,
+      },
+      endpointConfiguration: {
+        types: [apigw.EndpointType.REGIONAL],
       },
     });
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/cremich/sarahbonzelet.de/compare/v0.3.12...v0.4.0) (2022-07-25)
+
+
+### Features
+
+* **website:** update pricinglist for 2022 ([#130](https://github.com/cremich/sarahbonzelet.de/issues/130)) ([141acad](https://github.com/cremich/sarahbonzelet.de/commit/141acad382222f39379b4149dd245ed7d8f483b1))
+
+
+
+
+
 ## [0.3.12](https://github.com/cremich/sarahbonzelet.de/compare/v0.3.11...v0.3.12) (2022-07-25)
 
 **Note:** Version bump only for package root

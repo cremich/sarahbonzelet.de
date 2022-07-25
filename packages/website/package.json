@@ -3,7 +3,7 @@
   "version": "0.3.11",
   "dependencies": {
     "autoprefixer": "10.4.7",
-    "bulma": "0.9.3",
+    "bulma": "0.9.4",
     "postcss-cli": "9.1.0",
     "validator": "13.7.0"
   },

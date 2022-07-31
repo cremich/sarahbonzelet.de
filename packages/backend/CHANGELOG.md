@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.2](https://github.com/cremich/sarahbonzelet.de/compare/v0.4.1...v0.4.2) (2022-07-31)
+
+**Note:** Version bump only for package @sarahbonzelet.de/backend
+
+
+
+
+
 # [0.4.0](https://github.com/cremich/sarahbonzelet.de/compare/v0.3.12...v0.4.0) (2022-07-25)
 
 

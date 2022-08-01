@@ -2,7 +2,7 @@
   "name": "@sarahbonzelet.de/website",
   "version": "0.4.2",
   "dependencies": {
-    "autoprefixer": "10.4.7",
+    "autoprefixer": "10.4.8",
     "bulma": "0.9.4",
     "postcss-cli": "10.0.0",
     "validator": "13.7.0"
